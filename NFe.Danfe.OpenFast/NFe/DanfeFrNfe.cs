@@ -31,6 +31,7 @@
 /* Rua Comendador Francisco josé da Cunha, 111 - Itabaiana - SE - 49500-000     */
 /********************************************************************************/
 
+using System.IO;
 using DFe.Utils;
 using NFe.Classes;
 using NFe.Danfe.Base.NFe;
@@ -54,7 +55,7 @@ namespace NFe.Danfe.OpenFast.NFe
             byte[] frx = null;
             if (string.IsNullOrWhiteSpace(arquivoRelatorio))
             {
-                const string caminho = @"NFe\NFeRetrato.frx";
+                string caminho = Path.Combine("NFe", "NFeRetrato.frx");
                 frx = FrxFileHelper.TryGetFrxFile(caminho);
             }
 
